@@ -29,7 +29,7 @@ function calculateResults(){
     const x = Math.pow(1 + calculatedInterest, calculatedPayments);
     const monthly = (principal * x * calculatedInterest) / (x - 1);
     
-    document.getElementById("loading").style.display = 'none';
+    document.getElementById('loading').style.display = 'none';
 
     if(isFinite(monthly)){
         monthlyPayment.value = monthly.toFixed(2);
