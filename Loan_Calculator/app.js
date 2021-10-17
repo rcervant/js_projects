@@ -44,9 +44,14 @@ function showError(error) {
     card.insertBefore(errorDiv, heading);
 
     // Clear error after 3 seconds
-    setTimeout(clearError, 3000);
+    // setTimeout(clearError, 3000);
+    document.body.addEventListener('click', function(e){
+       if (document.querySelector(".alert")){
+         document.querySelector(".alert").remove(); 
+       }
+    });
 }
 
-function clearError(){
-    document.querySelector('.alert').remove();
-}
+// function clearError(){
+//     document.querySelector('.alert').remove();
+// }
